@@ -19,14 +19,16 @@ return (
     </div>
 )
 }
-const RestaurantCard = () => {
+
+const RestaurantCard = (props) => {
+    const {resName, resCusine}  = props;
     return (
         <div className="res-card">
             <img
             className="rest-logo" 
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToXogU2xLguKcjGFHbhRXp-ylhxBFiOfPyvA&s"></img>
-            <h3>Meghana Foods</h3>
-            <h4>Biryani,North Indian, Asian</h4>
+            <h3>{resName}</h3>
+            <h4>{resCusine}</h4>
             <h4>4.4stars</h4>
             <h4>38 minutes</h4>
         </div>
@@ -36,8 +38,13 @@ const Body = () => {
     return (
     <div className="body">
         <div className="search">Search</div>
-        <div className="rest-container">
-           <RestaurantCard/>
+        <div className="res-container">
+           <RestaurantCard
+           resName="Meghana Foods"
+           resCusine="Biryani , North Indian" />
+           <RestaurantCard
+           resName="KFC"
+           resCusine="Burger, Fast Food" />
         </div>
     </div>
 )}
