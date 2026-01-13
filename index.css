@@ -6,6 +6,7 @@
    
 }
 
+
 .logo{
     width: 100px;
  
@@ -22,6 +23,7 @@
 .nav-item >ul >li {
     padding: 10px;
     margin: 10px;
+   
 }
 .res-container {
  margin-left: 30px;
@@ -32,8 +34,8 @@
 .res-card{
     margin: 5px;
     padding: 5px;
-    width: 250px;
-    height:400px;
+    width: 400px;
+    height:500px;
    
     background-color: lightgrey;
 }
@@ -41,9 +43,7 @@
     cursor: pointer;
     border: 1px solid black;
 }
-.search{
-    padding: 10px;
-}
+
 
 .rest-logo{
     width: 100%;
@@ -52,4 +52,7 @@
 
 .filter{
     margin:10px;
+}
+.login{
+    padding:20px;
 }

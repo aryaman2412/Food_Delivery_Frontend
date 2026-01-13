@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { LOGO_URL } from "../utils/mockData";
+ 
 
 const HeadingComponent = () => {
+    const [loginBtn , setloginBtn] = useState("Login"); 
 return (
     <div className="header">
         <div className="logo-contianer">
@@ -12,8 +15,15 @@ return (
                 <li>About Us</li>
                 <li>Contact Us</li>
                 <li>Cart</li>
-
+            <li>
+                <button onClick={()=>{
+                    loginBtn==="Login"? setloginBtn("Logout"):setloginBtn("Login") ;
+                }}
+                className="login">{loginBtn}</button>
+            </li>
             </ul>
+              
+
         </div>
     </div>
 )
