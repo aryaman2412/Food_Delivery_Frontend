@@ -2,7 +2,8 @@
   "name": "food_delivery_frontend",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,13 @@
   "homepage": "https://github.com/aryaman2412/Food_Delivery_Frontend#readme",
   "description": "",
   "dependencies": {
+    "dom": "^0.0.3",
     "parcel": "^2.16.3",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "react-router": "^6.21.3",
+    "react-router-dom": "^6.21.3",
+    "router": "^2.2.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
