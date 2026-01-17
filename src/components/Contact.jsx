@@ -1,6 +1,6 @@
 const Contact = () =>{
     return (
-        <h1>Aryaman</h1>
+        <h1>Contact Me- 9835060861</h1>
     )
 };
 
