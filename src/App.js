@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import MenuCard from "./components/MenuCard";
+import "./index.css";
 
 
 
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
             element:<Contact/>
             },
             {
-            path:"/restaurants/:id",
+            path:"/restaurant/:resId",
             element:<MenuCard/>
             }
         ]

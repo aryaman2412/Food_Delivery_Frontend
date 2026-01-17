@@ -25,7 +25,7 @@ const Body = () => {
         <button 
         onClick ={()=>{
             const filterData=mockData.filter(rest=>rest.rating>4);
-                setListOfRestaurants(filterData);
+                setFilteredRestaurants(filterData);
         }}>Top Rated Restaurants</button>
       </div>
       <div className="res-container">
