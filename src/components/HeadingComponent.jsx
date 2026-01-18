@@ -28,7 +28,7 @@ return (
                 <button onClick={()=>{
                     loginBtn==="Login"? setloginBtn("Logout"):setloginBtn("Login") ;
                 }}
-                className="login">{loginBtn}</button>
+                >{loginBtn}</button>
             </li>
             </ul>
               
