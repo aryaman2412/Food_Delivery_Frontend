@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/mockData";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
  
 
 const HeadingComponent = () => {
     const [loginBtn , setloginBtn] = useState("Login"); 
+    const status = useOnlineStatus();
 return (
     <div className="header">
         <div className="logo-contianer">
@@ -12,6 +14,9 @@ return (
         </div>
         <div className ="nav-item">
             <ul>
+                <li>
+                    Status: {status ? "🟢" : "🔴"}
+                </li>
                 <li>
                     <Link to="/" >Home </Link>
                 </li>
