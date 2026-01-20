@@ -24,8 +24,15 @@ class UserClass extends React.Component {
     this.setState({
       users: data
     });
+
+    this.interval = setInterval(()=>{
+        console.log("I am an interval")
+    },1000);
   }
 
+  componentWillUnmount(){
+    clearInterval(this.interval)
+  }
   render() {
     const { name, location } = this.state.users;
 
