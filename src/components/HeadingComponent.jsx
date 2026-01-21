@@ -15,7 +15,7 @@ return (
         <div className ="nav-item">
             <ul>
                 <li>
-                    Status: {status ? "🟢" : "🔴"}
+                    Online Status: {status ? "🟢" : "🔴"}
                 </li>
                 <li>
                     <Link to="/" >Home </Link>
@@ -28,6 +28,9 @@ return (
                 </li>
                 <li>
                 <Link to="">Cart</Link>
+                </li>
+                <li>
+                <Link to="/grocery">Grocery</Link>
                 </li>
             <li>
                 <button onClick={()=>{
