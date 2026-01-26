@@ -37,9 +37,9 @@ class UserClass extends React.Component {
     const { name, location } = this.state.users;
 
     return (
-      <div className="user-card">
-        <h2>Name: {name}</h2>
-        <h3>Location: {location}</h3>
+      <div className="p-4">
+        <h2 className=" font-semibold text-xl">Name: {name}</h2>
+        <h3 className=" font-semibold text-xl">Location: {location}</h3>
       </div>
     );
   }

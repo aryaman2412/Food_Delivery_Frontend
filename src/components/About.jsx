@@ -3,8 +3,8 @@ import UserClass from "./UserClass";
 
 const About = () =>{
     return (
-    <div>
-        <h1>About </h1>
+    <div className="p-4 m-4">
+        <h1 className="font-bold text-2xl">About </h1>
      
         <UserClass />
        
