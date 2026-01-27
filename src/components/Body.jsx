@@ -1,6 +1,6 @@
 import { mockData } from "../utils/mockData";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard ,{withPromotedLabel}from "./RestaurantCard";
 import { useState } from "react";
 
 
@@ -8,6 +8,8 @@ const Body = () => {
     const [listOfRestaurants,setListOfRestaurants] = useState(mockData);
     const [filteredRestaurants ,setFilteredRestaurants] =useState(listOfRestaurants);
     const [searchedRestaurants , setSearchedRestaurants] = useState ("");
+
+    const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
     const status=useOnlineStatus();
     if(!status) return (<h2>Oppps! You are Offline.</h2>);
@@ -33,7 +35,12 @@ const Body = () => {
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key ={restaurant.id} resData={restaurant}/>
+          restaurant.promoted ? 
+          (
+          <RestaurantCardPromoted key ={restaurant.id} resData={restaurant}/>)
+           :(
+             <RestaurantCard key ={restaurant.id} resData={restaurant}/>
+           )
         ))}
       </div>
     </div>

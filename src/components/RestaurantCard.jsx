@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
-  const { id,name, image, cuisine, rating, etaMinutes } = resData;
+  const { id,name, image, cuisine, rating, etaMinutes,data } = resData;
+   
 
   return (
     <div className="m-4 p-4 w-100 bg-gray-100 rounded-2xl hover:bg-gray-300">
@@ -17,4 +18,15 @@ const RestaurantCard = (props) => {
   );
 };
 
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return(
+      <div>
+      <label className="absolute bg-black text-white m-2 p-2 rounded-lg">PROMOTED</label>
+      <RestaurantCard {...props}/>
+      </div>
+    )
+  }
+}
 export default RestaurantCard;
