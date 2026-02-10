@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { LOGO_URL } from "../utils/mockData";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "./UserContext";
  
 
 const HeadingComponent = () => {
     const [loginBtn , setloginBtn] = useState("Login"); 
     const status = useOnlineStatus();
+    const {loggedInUser} = useContext(UserContext);
 return (
     <div className="flex justify-between bg-pink-100 shadow-lg">
         <div>
@@ -38,6 +40,10 @@ return (
                 }}
                 >{loginBtn}</button>
             </li>
+            <li className="px-4 font-semibold">
+                {loggedInUser}
+                </li>
+
             </ul>
               
 
