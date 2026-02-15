@@ -2,7 +2,7 @@
   "name": "food_delivery_frontend",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "npx parcel index.html"
   },
   "repository": {
@@ -17,19 +17,29 @@
   "homepage": "https://github.com/aryaman2412/Food_Delivery_Frontend#readme",
   "description": "",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
     "@tailwindcss/postcss": "^4.1.18",
     "dom": "^0.0.3",
     "parcel": "^2.16.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "react-redux": "^9.2.0",
     "react-router": "^7.13.0",
     "react-router-dom": "^6.21.3",
     "router": "^2.2.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "babel-jest": "^30.2.0",
+    "create-jest": "^30.2.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
     "prettier": "3.8.0"
   }
 }
