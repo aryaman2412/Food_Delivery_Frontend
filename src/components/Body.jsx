@@ -33,7 +33,7 @@ const Body = () => {
                 setFilteredRestaurants(filterData);
         }}>Top Rated Restaurants</button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap" >
         {filteredRestaurants.map((restaurant) => (
           restaurant.promoted ? 
           (

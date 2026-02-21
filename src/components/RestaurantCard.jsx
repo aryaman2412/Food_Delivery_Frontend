@@ -6,7 +6,7 @@ const RestaurantCard = (props) => {
    
 
   return (
-    <div className="m-4 p-4 w-100 bg-gray-100 rounded-2xl hover:bg-gray-300">
+    <div className="m-4 p-4 w-100 bg-gray-100 rounded-2xl hover:bg-gray-300" data-testid="restaurant-card">
       <Link  className="res-link" to={`/restaurant/${id}` } >
       <img className="rounded-xl" src={image} alt={name} />
       <h3 className="py-2 font-bold text-lg">{name}</h3>
@@ -22,7 +22,7 @@ const RestaurantCard = (props) => {
 export const withPromotedLabel = (RestaurantCard) => {
   return (props) => {
     return(
-      <div>
+      <div data-testid="promoted-restaurant-card">
       <label className="absolute bg-black text-white m-2 p-2 rounded-lg">PROMOTED</label>
       <RestaurantCard {...props}/>
       </div>
